@@ -1,11 +1,23 @@
 server:
   port: 8092
 spring:
+  profiles:
+    active: dev
   application:
-    name: config_client02
+    name: config-client02
+  cloud:
+    config:
+      label: main
+      profile: dev
+      discovery:
+        enabled: true
+        service-id: config-server
 eureka:
   client:
-    register-with-eureka: false
-    fetch-registry: false
+    register-with-eureka: true
+    fetch-registry: true
     service-url:
       defaultZone: http://localhost:8082/eureka
+  instance:
+    prefer-ip-address: true
+    instance-id: spring-cloud-config-client02

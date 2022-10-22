@@ -2,21 +2,23 @@ server:
   port: 8082
 spring:
   application:
-    name: config_service
+    name: config-server
   profiles:
-    active: git
+    include: config
   cloud:
     config:
       server:
         git:
-          url: ${git.url}
+          uri: ${git.url}
           username: ${git.username}
-          password: ${gitsp.password}
+          password: ${git.password}
+          default-label: main
 eureka:
   client:
-    register-with-eureka: false
+    register-with-eureka: true
     fetch-registry: false
     service-url:
       defaultZone: http://localhost:8082/eureka
   instance:
     prefer-ip-address: true
+    instance-id: spring-cloud-config-server
