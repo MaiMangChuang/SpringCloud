@@ -3,10 +3,20 @@ server:
 spring:
   application:
     name: config_service
-  cloud.config.ser
+  profiles:
+    active: git
+  cloud:
+    config:
+      server:
+        git:
+          url: ${git.url}
+          username: ${git.username}
+          password: ${gitsp.password}
 eureka:
   client:
     register-with-eureka: false
     fetch-registry: false
     service-url:
       defaultZone: http://localhost:8082/eureka
+  instance:
+    prefer-ip-address: true

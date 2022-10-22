@@ -10,12 +10,13 @@
 
 
     <groupId>com.example</groupId>
-    <artifactId>spring_config_client</artifactId>
+    <artifactId>spring_config_client02</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>spring_config_client</name>
-    <description>spring_config_client</description>
+    <name>spring_config_client02</name>
+    <description>spring_config_client02</description>
     <modelVersion>4.0.0</modelVersion>
     <packaging>war</packaging>
+
     <dependencies>
 
         <dependency>
