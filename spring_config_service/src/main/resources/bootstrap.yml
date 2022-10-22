@@ -3,3 +3,10 @@ server:
 spring:
   application:
     name: config_service
+  cloud.config.ser
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://localhost:8082/eureka
