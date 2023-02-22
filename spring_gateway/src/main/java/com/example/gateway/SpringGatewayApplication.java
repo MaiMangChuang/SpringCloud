@@ -1,17 +1,16 @@
-package com.example.spring_config_client;
+package com.example.gateway;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
-import org.springframework.cloud.openfeign.EnableFeignClients;
-import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 
 
 @SpringBootApplication
 @EnableEurekaClient
-public class SpringConfigClientApplication {
+public class SpringGatewayApplication {
     public static void main(String[] args) {
-        SpringApplication.run(SpringConfigClientApplication.class, args);
+        SpringApplication.run(SpringGatewayApplication.class, args);
     }
 
 }

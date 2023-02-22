@@ -24,15 +24,15 @@
         <spring-cloud-starter-netflix-eureka-server-version>2.2.9.RELEASE</spring-cloud-starter-netflix-eureka-server-version>
         <spring-cloud-starter-netflix-eureka-client-version>2.2.9.RELEASE</spring-cloud-starter-netflix-eureka-client-version>
         <spring-cloud-starter-openfeign-version>2.2.9.RELEASE</spring-cloud-starter-openfeign-version>
+        <spring-cloud-starter-gateway-version>2.2.9.RELEASE</spring-cloud-starter-gateway-version>
         <spring-cloud-starter-bootstrap-version>3.0.4</spring-cloud-starter-bootstrap-version>
+
+        <spring-boot-starter-security-version>2.2.5.RELEASE</spring-boot-starter-security-version>
+
 
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-tomcat</artifactId>
@@ -55,13 +55,13 @@
             <artifactId>spring-cloud-starter-bootstrap</artifactId>
             <version>${spring-cloud-starter-bootstrap-version}</version>
         </dependency>
-<!--        <dependency>-->
-<!--            <groupId>javax.servlet</groupId>-->
-<!--            <artifactId>javax.servlet-api</artifactId>-->
-<!--            <version>4.0.1</version>-->
-<!--            <scope>provided</scope>-->
-<!--        </dependency>-->
 
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
     </dependencies>
 
     <dependencyManagement>
@@ -69,6 +69,7 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-security</artifactId>
+                <version>${spring-boot-starter-security-version}</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
@@ -100,13 +101,13 @@
                 <artifactId>spring-cloud-config-server</artifactId>
                 <version>${spring-cloud-config-server-version}</version>
             </dependency>
-
-
             <dependency>
-                <groupId>org.projectlombok</groupId>
-                <artifactId>lombok</artifactId>
-                <optional>true</optional>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-gateway</artifactId>
+                <version>${spring-cloud-starter-gateway-version}</version>
             </dependency>
+
+
         </dependencies>
     </dependencyManagement>
 
